@@ -1,14 +1,5 @@
 ---
-layout: home
+layout: default
 title: Christmas Recipes
 home: true
 ---
-
-t
-t
-t
-t
-t
-
-
-----
