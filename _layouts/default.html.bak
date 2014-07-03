@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ben Ubois | {{ page.title }}</title>
+	<link rel="alternate" type="application/atom+xml" title="Ben Ubois - Atom" href="http://feeds.feedburner.com/benubois" />
+	<link rel="stylesheet" href="/css/master.css?{{ site.time | date: "%Y%m%d%H%M%S" }}" />
+	<script src="/js/master.js?{{ site.time | date: "%Y%m%d%H%M%S" }}"></script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-172060-6']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+		})();
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<p id="logo"><a href="/">Ben Ubois</a></p>
+			<nav>
+				<ul class="clearfix">
+					<li{% if page.title == 'About' %} class="selected"{% endif %}><a href="/bluepyth/about.html">About</a></li>
+					<li{% if page.title == 'Links' %} class="selected"{% endif %}><a href="/bluepyth/links.html">Links</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="wrap">
+
+		<div class="site-wrap">
+			<section id="content-wrap">
+				<div class="container">
+
+					{{ content }}
+			
+				</div>
+			</section>
+		</div>
+
+		<footer class="container">
+			<p>By <a href="mailto:ben@benubois.com">Ben Ubois</a></p>
+		</footer>
+	</div>
+</body>
+</html>
