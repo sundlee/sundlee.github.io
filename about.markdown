@@ -3,11 +3,11 @@ layout: default
 title: About
 ---
 
-## About Ben
+## About sundlee
 
 <img src="http://www.gravatar.com/avatar/83af6f032520d79db3cb50c04e78b238.png?s=160" class="callout" height="80" width="80" />
 
-I’m a SW engineer.
+I’m a SW engineer. Now, I am adapting Ben's blog source to my github pages.
 
 Did I mention I’m obsessed with tools? [TextMate][tm] is the my favorite and I use it for just about everything I work on. This site is published using [Jekyll][jk] which “…is a blog-aware, static site generator in Ruby.” The [source for the site][src] and the site itself is hosted on GitHub.
 
