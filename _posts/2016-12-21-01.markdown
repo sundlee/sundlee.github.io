@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "컨테이너 안에서 이미지 태그를 수직-중앙으로 정렬하기"
+title:  "컨테이너 안에서 이미지 태그를 수직-중앙으로 정렬하기 from dhpark"
 date:   2016-12-21 12:00:00
 categories: css3
 ---
