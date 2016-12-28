@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "A test post"
-date:   2016-12-28 12:00:00
-categories: html5 css3
+date:   2016-12-28 22:43:00
+categories: ipsum
 ---
 
 Lorem ipsum
