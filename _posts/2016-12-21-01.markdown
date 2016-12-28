@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "컨테이너 안에서 이미지 태그를 수직-중앙으로 정렬하기"
+date:   2016-12-21 12:00:00
+categories: css3
+---
+
+
+`Github` 블로그의 첫 포스트는 컨테이너 안에서 이미지를 수직-중앙으로 정렬하기가 당첨되었다.
+일정한 너비를 가지는 컨테이너 안에서 이미지 태그들을 수평-중앙 정렬하는 방법은 매우 간단하지만,
+일정한 높이를 가지는 컨테이너 안에서 이미지 태그들을 수직-중앙 정렬하는 방법은 생각보다 까다로웠다.
+하지만 다음의 예제에서 보다 편하게 이미지 태그들을 수직-중앙 정렬하는 법을 알아보자.
+
+
+```html
+<div class="container">
+  <img src="temp.jpg">
+  <img src="temp.jpg">
+  <img src="temp.jpg">
+</div>
+```
+
+
+`.container` 클래스를 가지고 있는 컨테이너 안에서 `img` 태그들을 수직-중앙 정렬하고 싶으면
+이미지를 감싸고 있는 컨테이너 태그에 다음과 같은 `css` 속성을 적용시켜주기만 하면 된다.
+
+
+```css
+.container:before {
+  content: ' ' ;
+  display: inline-block ;
+  height: 100% ;
+  vertical-align: middle ;
+}
+```
+
+
+컨테이너의 `:before` 선택자가 지정되었다는 사실을 잊지 말고 `content` 속성의 스페이스 한 칸도 잊으면 안된다.
+그 다음 이미지 태그의 `vertical-align: middle ;` 을 지정해주면 정렬이 가능하다.
+
+
+```css
+.container img {
+  vertical-align: middle ;
+}
+```
+
+
+보다 자세한 예제를 다음 `codepen` 을 통해서 보자.
+
+
+<pre data-height="400" data-theme-id="dark" data-slug-hash="PbLgpQ" data-default-tab="result" data-user="dhpark" data-embed-version="2" data-pen-title="img-vertical-align-middle" class="codepen">See the Pen <a href="http://codepen.io/dhpark/pen/PbLgpQ/">img-vertical-align-middle</a> by dhpark (<a href="http://codepen.io/dhpark">@dhpark</a>) on <a href="http://codepen.io">CodePen</a>.</pre>
+<script src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+자세히 보면 이미지 좌우로 약간의 여백이 생기는 현상을 볼 수 있는데 위는 컨테이너에 `font-size: 0 ;`
+을 줌으로써 해결이 가능하다.
+
+
+<pre data-height="400" data-theme-id="0" data-slug-hash="JbVReE" data-default-tab="result" data-user="dhpark" data-embed-version="2" data-pen-title="img_vertical_align_middle_no_space" class="codepen">See the Pen <a href="http://codepen.io/dhpark/pen/JbVReE/">img_vertical_align_middle_no_space</a> by dhpark (<a href="http://codepen.io/dhpark">@dhpark</a>) on <a href="http://codepen.io">CodePen</a>.</pre>
+<script src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

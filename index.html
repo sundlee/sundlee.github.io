@@ -1,66 +1,22 @@
 ---
 layout: default
-title: Home
 ---
 
-<h1 class="border">UNDER CONSTRUCTION.</h2>
-<h1 class="border">UNDER CONSTRUCTION.</h2>
-<h1 class="border">UNDER CONSTRUCTION.</h2>
-<h1 class="border">UNDER CONSTRUCTION.</h2>
-<h1 class="border">UNDER CONSTRUCTION.</h2>
-<h1 class="border">UNDER CONSTRUCTION.</h2>
-<br/><br/><br/><br/><br/>
-<hr/>
-<h2 class="border">Projects</h2>
-
-<div class="span-18 last">
-	<a href="https://feedbin.me">
-		<img src="img/project_feedbin.png" width="702" class="tile"/>
-		<span class="title">Feedbin</span>
-	</a>
-	<p class="subtitle">A fast, simple RSS feed reader that delivers a great reading experience</p>
-</div>
-<hr class="space" />
-<div class="span-6 project">
-	<a href="/transcode">
-		<img src="/img/project_transcode.png?v=2" width="222" height="222" class="tile" />
-		<span class="title">Transcode</span>
-	</a>
-	<p class="subtitle">A Resque-backed HandBrake powered batch DVD transcoder</p>
-</div>
-<div class="span-6 project">
-	<a href="http://subscribeapp.com">
-		<img src="/img/project_subscribe.png?v=2" width="222" height="222" class="tile" />
-		<span class="title">Subscribe</span>
-	</a>
-	<p class="subtitle">Manage your Google Reader subscriptions</p>
-</div>
-<div class="span-6 project last">
-	<a href="https://github.com/benubois/redis-browser">
-		<img src="/img/project_redis_browser.png" width="222" height="222" class="tile" />
-		<span class="title">Redis Browser</span>
-	</a>
-	<p class="subtitle">Browser based redis viewer</p>
-</div>
-<hr class="space" />
-<div class="span-6 project">
-	<a href="https://github.com/benubois/steamy">
-		<img src="/img/project_steamy.png?v=3" width="222" height="222" class="tile" />
-		<span class="title">steamy</span>
-	</a>
-	<p class="subtitle">Fast database dumps</p>
-</div>
-<div class="span-6 project">
-	<a href="https://github.com/benubois/pmail">
-		<img src="/img/project_pmail.png?v=3" width="222" height="222" class="tile" />
-		<span class="title">pmail</span>
-	</a>
-	<p class="subtitle">Command line Postmark</p>
-</div>
-<div class="span-6 project last">
-	<a href="https://github.com/flickerbox/dashboard">
-		<img src="/img/project_dashboard.png?v=2" width="222" height="222" class="tile" />
-		<span class="title">Dashboard</span>
-	</a>
-	<p class="subtitle">Mantis Status Dashboard</p>
+<div class="home">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <br>
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y %H:%m" }}</span>
+        <hr id="line">
+		<div class="content">
+		{{ post.excerpt }}
+        </div>
+		<br>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
